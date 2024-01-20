@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text,FlatList } from 'react-native'
-import { UseDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
 

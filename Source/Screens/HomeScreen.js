@@ -7,7 +7,7 @@ import {
   TextInput,
 } from 'react-native';
 import { homeScreenAction } from '../Redux/HomeScreenRedux/Actions/HomeScreenActions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 
 
 const HomeScreen = ({ navigation }) => {
