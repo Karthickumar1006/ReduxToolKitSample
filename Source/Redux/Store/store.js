@@ -10,8 +10,7 @@ const reducers = combineReducers({
 
 const Store = configureStore({
     reducer: reducers,
-    middleware: [thunk]
-
+    
 });
 
 export { Store };
