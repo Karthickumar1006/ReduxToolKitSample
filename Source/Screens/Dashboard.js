@@ -1,19 +1,17 @@
 import React from "react";
-import { View, Text,FlatList } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import { useSelector } from "react-redux";
 
 const Dashboard = () => {
-
-    const homeScreenData = useSelector((state) => state.HomeScreen.homeScreen)
-
+  const homeScreenData = useSelector((state) => state.HomeScreen.homeScreen)
   const renderItem = ({ item }) => (
     <View>
       <Text>User ID: {item.id}</Text>
     </View>
   );
 
-    return (
-        <View>
+  return (
+    <View>
       {homeScreenData.length ? (
         <FlatList
           data={homeScreenData.slice(0, 10)} // Display only the first 10 items
@@ -24,7 +22,6 @@ const Dashboard = () => {
         <Text>Loading...</Text>
       )}
     </View>
-    )
+  )
 }
-
 export default Dashboard;

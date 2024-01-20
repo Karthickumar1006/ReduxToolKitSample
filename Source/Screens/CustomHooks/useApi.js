@@ -1,5 +1,4 @@
- 
-const useApi = async (url) => {
+ const useApi = async (url) => {
     try {
       const response = await fetch(url);
       const result = await response.json();

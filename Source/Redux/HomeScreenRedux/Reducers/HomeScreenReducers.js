@@ -7,7 +7,6 @@ const initialState = {
   loading: false,
 };
 
-
 const homeScrenSlice = createSlice({
   name: 'HomeScreen',
   initialState,
@@ -35,5 +34,4 @@ const homeScrenSlice = createSlice({
   },
 });
 export const { clearError, showLoader } = homeScrenSlice.actions;
-
 export default homeScrenSlice.reducer;

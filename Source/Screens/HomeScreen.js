@@ -9,10 +9,8 @@ import {
 import { homeScreenAction } from '../Redux/HomeScreenRedux/Actions/HomeScreenActions';
 import { useDispatch} from 'react-redux';
 
-
 const HomeScreen = ({ navigation }) => {
   const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-
   const dispatch = useDispatch();
   const [inputText, setinputText] = useState('');
 
@@ -27,7 +25,6 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-
       <TextInput
         style={{ margin: '5%' }}
         value={inputText}
