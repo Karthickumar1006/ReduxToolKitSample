@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -6,28 +6,30 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import {homeScreenAction} from '../Redux/HomeScreenRedux/Actions/HomeScreenActions';
-import {useDispatch, useSelector} from 'react-redux';
+import { homeScreenAction } from '../Redux/HomeScreenRedux/Actions/HomeScreenActions';
+import { useDispatch, useSelector } from 'react-redux';
 
-const HomeScreen = ({navigation}) => {
+
+const HomeScreen = ({ navigation }) => {
+  const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
   const dispatch = useDispatch();
   const [inputText, setinputText] = useState('');
 
   const valueChangeText = text => {
     setinputText(text);
-    console.log('Text=====>', text);
   };
 
   const handleClick = () => {
-    console.log('StateValue======>', inputText);
-    dispatch(homeScreenAction(inputText));
+    dispatch(homeScreenAction(apiUrl));
     navigation.navigate('Dashboard');
   };
 
   return (
     <View style={styles.container}>
+
       <TextInput
-        style={{margin: '5%'}}
+        style={{ margin: '5%' }}
         value={inputText}
         onChangeText={text => {
           valueChangeText(text);
